@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ai-generated-image-exif"
+version = "0.1.0"
+description = "AI 图片检测工具 - 通过元数据识别 AI 生成的图片"
+authors = ["Chance Dean <novelnexusai@outlook.com>"]
+readme = "README.md"
+packages = [{include = "ai_generated_image_exif", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.0"
+rich = "^13.7.0"
+Pillow = "^10.2.0"
+ExifRead = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+black = "^23.12.0"
+ruff = "^0.1.0"
+
+[tool.poetry.scripts]
+ai-image-detect = "ai_generated_image_exif.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
