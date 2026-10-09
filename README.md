@@ -35,7 +35,8 @@ A powerful CLI tool to detect AI-generated images by analyzing their metadata si
 poetry install
 
 # Using pip
-pip install ai-generated-image-exif
+pip install "git+https://github.com/PerryLink/AI-Generated-Image-EXIF-Detector.git"
+# (installs from source; not yet on PyPI)
 ```
 
 ### Basic Usage | 基础使用
